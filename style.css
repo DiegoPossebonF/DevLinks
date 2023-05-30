@@ -4,10 +4,14 @@
   box-sizing: border-box;
 }
 
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
 :root {
   --text-color: #ddc8c8;
-  --bg-url-mobile: url(assets/bg-galaxy-mobile.jpg);
-  --bg-url-desktop: url(assets/bg-galaxy-desktop.jpg);
+  --bg-url: url(assets/bg-galaxy-mobile.jpg);
   --stroke-color: rgba(221, 200, 200, 0.4);
   --stroke-color-hover: rgba(221, 200, 200, 0.6);
   --surface-color: rgba(0, 0, 0, 0.6);
@@ -17,8 +21,7 @@
 
 .light {
   --text-color: rgb(41, 39, 39);
-  --bg-url-mobile: url(assets/bg-sky-mobile.jpg);
-  --bg-url-desktop: url(assets/bg-sky-desktop.jpg);
+  --bg-url: url(assets/bg-sky-mobile.jpg);
   --stroke-color: rgba(0, 0, 0, 0.1);
   --stroke-color-hover: rgba(0, 0, 0, 0.4);
   --surface-color: rgba(221, 200, 200, 0.6);
@@ -26,31 +29,10 @@
   --switch-bg-url: url(assets/sun.svg);
 }
 
-@media screen and (max-width: 900px) {
-  body {
-    background: var(--bg-url-mobile) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    transition: background 1s;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  body {
-    background: var(--bg-url-desktop) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    transition: background 1s;
-  }
-}
-
-body * {
-  font-family: "Inter", sans-serif;
-  color: var(--text-color);
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
+  transition: background 1s;
 }
 
 #container {
@@ -181,4 +163,14 @@ footer {
 
 strong {
   color: rgb(71, 71, 241);
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(assets/bg-galaxy-desktop.jpg);
+  }
+  
+  .light {
+    --bg-url: url(assets/bg-sky-desktop.jpg);
+  }
 }

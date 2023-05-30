@@ -22,10 +22,10 @@ body * {
 .light {
   --text-color: rgb(41, 39, 39);
   --bg-url: url(assets/bg-sky-mobile.jpg);
-  --stroke-color: rgba(0, 0, 0, 0.1);
-  --stroke-color-hover: rgba(0, 0, 0, 0.4);
-  --surface-color: rgba(221, 200, 200, 0.6);
-  --surface-color-hover: rgba(221, 200, 200, 0.2);
+  --stroke-color: rgba(0, 0, 0, 0.2);
+  --stroke-color-hover: rgba(0, 0, 0, 0.6);
+  --surface-color: rgba(221, 200, 200, 0.2);
+  --surface-color-hover: rgba(221, 200, 200, 0.6);
   --switch-bg-url: url(assets/sun.svg);
 }
 
@@ -75,6 +75,15 @@ body {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+  animation: slide-out .6s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--surface-color-hover);
+}
+
+.light #switch button {
+  animation: slide-in .6s forwards;
 }
 
 #switch span {
@@ -86,11 +95,6 @@ body {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
-}
-
-.light #switch button {
-  right: 0;
-  left: initial;
 }
 
 #container ul {
@@ -117,7 +121,7 @@ body {
 
   font-weight: 500;
   text-decoration: none;
-  transition: background 0.2s;
+  transition: all 0.6s;
 }
 
 #container ul > li > a:hover {
@@ -172,5 +176,23 @@ strong {
   
   .light {
     --bg-url: url(assets/bg-sky-desktop.jpg);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }

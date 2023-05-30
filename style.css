@@ -49,6 +49,11 @@ body {
 
 #profile img {
   width: 156px;
+  animation: down-img .6s forwards;
+}
+
+#profile img:hover {
+  animation: up-img .6s forwards;
 }
 
 #profile p {
@@ -194,5 +199,23 @@ strong {
   }
   to {
     left: 0;
+  }
+}
+
+@keyframes up-img {
+  from {
+    width: 156px;
+  }
+  to {
+    width: 250px;
+  }
+}
+
+@keyframes down-img {
+  from {
+    width: 250px;
+  }
+  to {
+    width: 156px;
   }
 }

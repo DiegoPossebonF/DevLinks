@@ -13,3 +13,16 @@ function toggleMode() {
         img.setAttribute('alt', 'Imagem de Diego e Melissa em um casamento bebendo cerveja')
     }
 }
+
+function changeFooter() {
+    const footerTxt = document.getElementById('footer-txt')
+
+    footerTxt.classList.toggle('change')
+
+    if(footerTxt.classList.contains('change')) {
+        footerTxt.innerHTML = 'Alterado para estudo por Diego'
+    } else {
+        footerTxt.innerHTML = 'Feito com ♥ pela Rocketseat'
+    }
+    
+}

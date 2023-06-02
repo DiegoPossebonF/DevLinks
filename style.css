@@ -170,8 +170,8 @@ footer {
   gap: 8px;
 }
 
-strong {
-  color: rgb(71, 71, 241);
+footer div {
+  cursor: pointer;
 }
 
 @media (min-width: 700px) {

@@ -1,56 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
 
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+    <title>DevLinks</title>
+  </head>
 
-  <title>DevLinks</title>
-</head>
-
-<body>
-  <div id="container">
-    <div id="profile">
-      <img src="assets/avatar-dark.png" alt="Imagem de Diego e Melissa tomando cerveja em um casamento." />
-      <p>@diego.possebonfernandes</p>
+  <body>
+    <div id="container">
+      <div id="profile">
+        <img
+          src="assets/avatar-dark.png"
+          alt="Imagem de Diego e Melissa tomando cerveja em um casamento."
+        />
+        <p>@diego.possebonfernandes</p>
+      </div>
+      <div id="switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
+      </div>
+      <ul>
+        <li>
+          <a href="#">LINK 1</a>
+        </li>
+        <li>
+          <a href="#" target="_blank">LINK 2</a>
+        </li>
+        <li>
+          <a href="#" target="_blank"> LINK 3</a>
+        </li>
+        <li>
+          <a href="#" target="_blank">LINK 4</a>
+        </li>
+      </ul>
+      <div id="social-links">
+        <a href="https://github.com/DiegoPossebonF" target="_blank"
+          ><ion-icon name="logo-github"></ion-icon
+        ></a>
+        <a href="https://instagram.com/rocketseat" target="_blank"
+          ><ion-icon name="logo-instagram"></ion-icon
+        ></a>
+        <a href="https://youtube.com/@rocketseat" target="_blank"
+          ><ion-icon name="logo-youtube"></ion-icon
+        ></a>
+      </div>
+      <footer>
+        <ion-icon name="code-sharp"></ion-icon>
+        <div id="footer-txt" onclick="changeFooter()">
+          Feito com ♥ pela Rocketseat
+        </div>
+        <ion-icon name="code-slash-sharp"></ion-icon>
+      </footer>
     </div>
-    <div id="switch" onclick="toggleMode()">
-      <button>
-      </button>
-      <span></span>
-    </div>
-    <ul>
-      <li>
-        <a href="#">Baixar meu e-book</a>
-      </li>
-      <li>
-        <a href="https://github.com/DiegoPossebonF" target="_blank">Meu Portfólio</a>
-      </li>
-      <li>
-        <a href="http://dpfdev.cloud" target="_blank">DevLinks no Oracle Cloud VPS</a>
-      </li>
-    </ul>
-    <div id="social-links">
-      <a href="https://github.com/DiegoPossebonF" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
-      <a href="https://instagram.com/rocketseat" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
-      <a href="https://youtube.com/@rocketseat" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
-    </div>
-    <footer>
-      <ion-icon name="code-sharp"></ion-icon>
-      <div id="footer-txt" onclick="changeFooter()">Feito com ♥ pela Rocketseat</div>
-      <ion-icon name="code-slash-sharp"></ion-icon>
-    </footer>
-  </div>
 
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script src="script.js"></script>
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>
